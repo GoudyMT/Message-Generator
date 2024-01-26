@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&family=Open+Sans&family=Roboto+Slab&display=swap');
+
+html {
+    background-color: #F5F5F5;
+}
+
+
+/* Reset margin and padding for the body to remove any default spacing */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the grid container to cover the full viewport and define the grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Creates 12 columns */
+    grid-template-rows: repeat(7, 1fr); /* Creates 7 rows */
+    gap: 2px; /* Space between grid items */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
+
+/* Header Section*/
+.header {
+    grid-column: 1 / -1; /* Span from first to last column */
+    grid-row: 1; /* First row */
+    
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center align vertically */
+    justify-content: center; /* Center align horizontally */
+    background-color: #E76F51;
+    color: #264653;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.history {
+    grid-column: 1 / 3; /* Span first two columns */
+    grid-row: 2 / 7; /* Span from second to last row */
+    display: flex; /* Use Flexbox */
+    align-items: start; /* Center align vertically */
+    justify-content: left; /* Center align horizontally */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+    max-height: 100%; /* Prevents the box from growing beyond its grid area */
+    padding: 3%;
+    background-color: #F4A261;
+    color: #264653;
+    border-radius: 10px;
+    font-family: 'Lora', serif;
+}
+
+
+/*Generator Section */
+
+.generator {
+    grid-column: 3 / -1; /* Span from third column to last */
+    grid-row: 2 / 7; /* Span from second to last row */
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center align vertically */
+    justify-content: center; /* Center align horizontally */
+    background-color: #E63946;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#quoteButton {
+    margin: 50px;
+    background-color: ;
+}
+
+.generated-image {
+    max-width: 400px; /* Maximum width */
+    max-height: 400px; /* Maximum height */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Display as block to remove bottom space */
+    margin: 0 auto; /* Center the image if it's smaller than the container */
+}
+
+.generated-text {
+    max-width: 400px; /* Maximum width */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Display as block to remove bottom space */
+    text-align: center;
+    color: #264653;
+
+}
+
+/*Footer Section */
+
+.footer {
+    grid-column: 1 / -1; /* Span from first to last column */
+    grid-row: 7; /* Last row */
+    border-radius: 10px;
+    display: flex; /* Use Flexbox */
+    align-items: end; /* Center align vertically */
+    justify-content: space-between; /* Center align horizontally */
+    padding: 0px 1%;
+    background-color: #E76F51;
+    color: #264653;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Button Section */
+
+.button {
+    padding: 10px 20px; /* Adjust the padding as per your preference */
+    font-size: 16px; /* Size of the text inside the button */
+    font-weight: bold; /* Make the text a bit bolder */
+    color: #F5F5F5; /* Text color */
+    background-color: #E76F51; /* Primary button color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Slightly rounded corners for a modern look */
+    cursor: pointer; /* Change mouse cursor to indicate button */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover and active states */
+}
+
+/* Hover state */
+.button:hover {
+    background-color: #F4A261; /* Sandy Brown, lighter and distinct */
+    transform: translateY(-2px); /* Slight raise effect */
+    /* Optionally, add a box-shadow for more depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Active/Clicked state */
+.button:active {
+    color:#E63946;
+    background-color: #F5F5F5; /* Change color when clicked */
+    transform: translateY(1px); /* Slight press down effect */
+}
+
+/* Scroll Bar Section */
+
+/* Style the scrollbar track (the part the scrollbar sits in) */
+.history::-webkit-scrollbar-track {
+    background-color: #F5F5F5; /* Light grey, matching the background for a subtle look */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Style the scrollbar thumb (the part that you drag) */
+.history::-webkit-scrollbar-thumb {
+    background-color: #E76F51; /* Burnt Sienna, for a nice contrast and warm feel */
+    border-radius: 15px; /* Rounded corners for the thumb */
+    border: 3px solid #F5F5F5; /* Adds a border around the thumb with the background color */
+}
+
+/* Handle the hover state of the scrollbar thumb */
+.history::-webkit-scrollbar-thumb:hover {
+    background-color: #F4A261; /* Sandy Brown, slightly lighter for the hover state */
+}
+
+/* Set the width of the scrollbar */
+.history::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
